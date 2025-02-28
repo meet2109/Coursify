@@ -1,0 +1,667 @@
+/* Root Variables */
+:root {
+    --primary-color: #1A1A40;
+    --secondary-color: #1B1F3B;
+    --accent-color: #6246EA;
+    --text-color: #FFFFFF;
+    --gradient: linear-gradient(135deg, #2B2D42 0%, #3A506B 100%);
+}
+
+/* General Styles */
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #F8F9FA;
+    color: var(--primary-color);
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    padding-top: 80px; /* Prevents content from overlapping with the fixed navbar */
+}
+
+/* Header & Navbar */
+header {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    background: var(--primary-color);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    padding: 15px 0;
+    z-index: 1000;
+}
+
+nav {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-links {
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-links a {
+    color: var(--text-color);
+    font-weight: 500;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    transition: color 0.3s ease-in-out;
+}
+
+.nav-links a:hover {
+    color: var(--accent-color);
+}
+
+/* Mobile Navbar */
+@media (max-width: 768px) {
+    .nav-links {
+        position: fixed;
+        right: -100%;
+        top: 80px;
+        flex-direction: column;
+        background: var(--primary-color);
+        width: 70%;
+        padding: 2rem;
+        transition: right 0.3s ease-in-out;
+        box-shadow: -5px 0 20px rgba(0, 0, 0, 0.2);
+    }
+
+    .nav-links.active {
+        right: 0;
+    }
+}
+
+/* Hero Section */
+.hero {
+    background: var(--gradient);
+    height: 85vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+    padding: 20px;
+}
+
+.hero-content h2 {
+    font-size: 3.5rem;
+    font-weight: 700;
+    max-width: 800px;
+}
+
+.hero-content p {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+}
+
+.hero-content .btn {
+    background: var(--accent-color);
+    color: white;
+    padding: 12px 25px;
+    border-radius: 8px;
+    font-size: 1rem;
+    transition: all 0.3s ease-in-out;
+}
+
+.hero-content .btn:hover {
+    background: #4936D1;
+    transform: translateY(-3px);
+}
+
+/* Features Section */
+.features {
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+    margin: 50px auto;
+    max-width: 1200px;
+    text-align: center;
+}
+
+.feature-card {
+    background: white;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease-in-out;
+    flex: 1;
+}
+
+.feature-card:hover {
+    transform: translateY(-5px);
+}
+
+/* Courses Page */
+.course-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    max-width: 1200px;
+    margin: auto;
+    padding: 40px 20px;
+}
+
+.course-card {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease-in-out;
+    text-align: center;
+}
+
+.course-card:hover {
+    transform: translateY(-8px);
+}
+
+.course-card img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+/* About Page */
+.about {
+    max-width: 1000px;
+    margin: 120px auto 50px;
+    padding: 20px;
+    text-align: center;
+}
+
+.about h2 {
+    font-size: 2.8rem;
+    color: var(--primary-color);
+    margin-bottom: 20px;
+}
+
+/* About Content - Fixing Broken Layout */
+.about-content {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+    margin-top: 30px;
+}
+
+.about-text {
+    flex: 1;
+    text-align: left;
+    max-width: 500px;
+}
+
+.about-text h3 {
+    font-size: 2rem;
+    color: var(--accent-color);
+}
+
+.about-text p {
+    font-size: 1.2rem;
+    color: #333;
+    line-height: 1.6;
+}
+
+.about-image {
+    flex: 1;
+    text-align: center;
+}
+
+.about-image img {
+    width: 100%;
+    max-width: 400px;
+    border-radius: 15px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+}
+
+/* Stats Section */
+.stats {
+    background: var(--secondary-color);
+    color: white;
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.stats-container {
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    max-width: 900px;
+    margin: auto;
+    flex-wrap: wrap;
+}
+
+.stat-item {
+    text-align: center;
+    flex: 1;
+    min-width: 200px;
+}
+
+.stat-item h3 {
+    font-size: 2.5rem;
+    margin: 10px 0;
+}
+
+.stat-item p {
+    font-size: 1.2rem;
+}
+
+/* Meet Our Experts Section */
+.team {
+    max-width: 1000px;
+    margin: 50px auto;
+    text-align: center;
+}
+
+.team h2 {
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+}
+
+.team-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+}
+
+.team-member {
+    background: white;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    text-align: center;
+    transition: transform 0.3s;
+    width: 250px;
+}
+
+.team-member:hover {
+    transform: translateY(-5px);
+}
+
+.team-member img {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    margin-bottom: 15px;
+}
+
+.team-member h3 {
+    font-size: 1.5rem;
+    color: var(--primary-color);
+}
+
+.team-member p {
+    font-size: 1rem;
+    color: #666;
+}
+
+/* Mobile Adjustments */
+@media (max-width: 768px) {
+    .about-content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .about-text {
+        text-align: center;
+    }
+
+    .stats-container {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .team-grid {
+        flex-direction: column;
+        gap: 20px;
+    }
+}
+
+
+/* Contact Page */
+.contact {
+    max-width: 1000px;
+    margin: 120px auto 50px;
+    padding: 20px;
+    text-align: center;
+}
+
+.contact h2 {
+    font-size: 2.8rem;
+    color: var(--primary-color);
+    margin-bottom: 20px;
+}
+
+/* Contact Form & Info */
+.contact-container {
+    display: flex;
+    gap: 40px;
+    justify-content: space-between;
+    margin-top: 30px;
+}
+
+.contact-form {
+    flex: 1;
+    background: white;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+    text-align: left;
+}
+
+/* Input Fields */
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 14px;
+    margin: 10px 0;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    font-size: 1rem;
+    outline: none;
+    transition: border 0.3s ease-in-out;
+}
+
+/* Input Focus Effect */
+.contact-form input:focus,
+.contact-form textarea:focus {
+    border-color: var(--accent-color);
+    box-shadow: 0 4px 8px rgba(98, 70, 234, 0.3);
+}
+
+/* Stylish Button */
+.contact-form .btn {
+    width: 100%;
+    background: var(--accent-color);
+    color: white;
+    padding: 14px;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.2s;
+}
+
+.contact-form .btn:hover {
+    background: #4936D1;
+    transform: translateY(-3px);
+}
+
+/* Contact Info Section */
+.contact-info {
+    flex: 1;
+    background: var(--secondary-color);
+    color: white;
+    padding: 30px;
+    border-radius: 12px;
+    text-align: left;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+}
+
+.contact-info h3 {
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+}
+
+.contact-info p {
+    font-size: 1.2rem;
+    margin: 10px 0;
+}
+
+/* Google Map Styling */
+.map-container {
+    margin-top: 20px;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+/* Mobile Adjustments */
+@media (max-width: 768px) {
+    .contact-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .contact-form {
+        text-align: center;
+    }
+
+    .contact-info {
+        text-align: center;
+    }
+}
+/* Login/Register Form */
+.auth-form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    padding: 20px;
+}
+
+/* Card Style */
+.login-container {
+    background: white;
+    padding: 35px;
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    width: 400px;
+    text-align: center;
+}
+
+/* Title */
+.auth-form h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+/* Input Fields */
+.auth-form input {
+    width: 100%;
+    padding: 14px;
+    margin: 10px 0;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    font-size: 1rem;
+    outline: none;
+    transition: border 0.3s ease-in-out;
+}
+
+/* Input Focus Effect */
+.auth-form input:focus {
+    border-color: var(--accent-color);
+    box-shadow: 0 4px 8px rgba(98, 70, 234, 0.3);
+}
+
+/* Password Field with Toggle */
+.password-field {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.password-field input {
+    width: 100%;
+    padding-right: 40px;
+}
+
+/* Eye Icon */
+.password-field span {
+    position: absolute;
+    right: 10px;
+    cursor: pointer;
+    font-size: 1.2rem;
+    color: gray;
+    transition: color 0.3s;
+}
+
+.password-field span:hover {
+    color: var(--accent-color);
+}
+
+/* Stylish Button */
+.auth-form .btn {
+    width: 100%;
+    background: var(--accent-color);
+    color: white;
+    padding: 14px;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.2s;
+}
+
+.auth-form .btn:hover {
+    background: #4936D1;
+    transform: translateY(-3px);
+}
+
+/* Forgot Password & Register */
+.auth-form p {
+    font-size: 1rem;
+    margin-top: 10px;
+}
+
+.auth-form p a {
+    color: var(--accent-color);
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.auth-form p a:hover {
+    text-decoration: underline;
+}
+
+/* Social Login */
+.social-login {
+    margin-top: 20px;
+}
+
+.social-btn {
+    display: block;
+    width: 100%;
+    padding: 12px;
+    margin-top: 10px;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background 0.3s, transform 0.2s;
+}
+
+.google {
+    background: #DB4437;
+    color: white;
+}
+
+.facebook {
+    background: #3B5998;
+    color: white;
+}
+
+.social-btn:hover {
+    transform: translateY(-3px);
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+    .login-container {
+        width: 90%;
+    }
+}
+/* Footer */
+footer {
+    background: var(--primary-color);
+    color: white;
+    text-align: center;
+    padding: 20px;
+    margin-top: 40px;
+}
+
+.social-links a {
+    color: white;
+    text-decoration: none;
+    margin: 0 10px;
+}
+
+.social-links a:hover {
+    color: var(--accent-color);
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+    .hero-content h2 {
+        font-size: 2.5rem;
+    }
+
+    .features {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .course-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .contact-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .register-container,
+    .login-container {
+        width: 90%;
+    }
+}
+/* Mobile Menu Toggle Button */
+.menu-toggle {
+    display: none;
+    font-size: 2rem;
+    cursor: pointer;
+    color: var(--text-color);
+    transition: transform 0.2s;
+}
+
+.menu-toggle:hover {
+    transform: scale(1.1);
+}
+
+/* Mobile Navigation */
+@media (max-width: 768px) {
+    .menu-toggle {
+        display: block;
+    }
+
+    .nav-links {
+        position: fixed;
+        right: -100%;
+        top: 80px;
+        flex-direction: column;
+        background: var(--primary-color);
+        width: 70%;
+        height: 100vh;
+        padding-top: 50px;
+        text-align: center;
+        transition: right 0.3s ease-in-out;
+        box-shadow: -5px 0 20px rgba(0, 0, 0, 0.2);
+    }
+
+    .nav-links.active {
+        right: 0;
+    }
+
+    .nav-links li {
+        margin-bottom: 20px;
+    }
+}

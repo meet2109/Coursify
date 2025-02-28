@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Courses - Coursify</title>
+    <link rel="stylesheet" href="style.css">
+    <script>
+        function toggleMenu() {
+            document.querySelector('.nav-links').classList.toggle('active');
+        }
+    </script>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <h1>Coursify</h1>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="courses.html" class="active">Courses</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="login.html" class="btn nav-btn">Login</a></li>
+            </ul>
+            <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+        </nav>
+    </header>
+    <script>
+        function toggleMenu() {
+            document.querySelector('.nav-links').classList.toggle('active');
+        }
+        </script>
+        
+
+    <section class="courses">
+        <h2>Popular Courses</h2>
+        <div class="course-grid">
+            <div class="course-card">
+                <img src="https://images.unsplash.com/photo-1542831371-29b0f74f9713?auto=format&fit=crop&w=300&q=80" alt="Web Development">
+                <h3>Web Development</h3>
+                <p>Master HTML, CSS, and JavaScript</p>
+                <span class="price">700rs</span>
+                <a href="#" class="btn">Enroll Now</a>
+            </div>
+            <div class="course-card">
+                <img src="https://images.unsplash.com/photo-1542831371-29b0f74f9713?auto=format&fit=crop&w=300&q=80" alt="Python Programming">
+                <h3>Python Programming</h3>
+                <p>From basics to advanced concepts</p>
+                <span class="price">800rs</span>
+                <a href="#" class="btn">Enroll Now</a>
+            </div>
+            <div class="course-card">
+                <img src="https://images.unsplash.com/photo-1550439062-609e1531270e?auto=format&fit=crop&w=300&q=80" alt="Digital Marketing">
+                <h3>Digital Marketing</h3>
+                <p>SEO, Social Media, and more</p>
+                <span class="price">900rs</span>
+                <a href="#" class="btn">Enroll Now</a>
+            </div>
+            <div class="course-card">
+                <img src="https://images.unsplash.com/photo-1550439062-609e1531270e?auto=format&fit=crop&w=300&q=80" alt="Photography">
+                <h3>Photography</h3>
+                <p>Master the art of photography</p>
+                <span class="price">1000rs</span>
+                <a href="#" class="btn">Enroll Now</a>
+                </div>
+            
+            </div>
+        </div>
+            
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Coursify. All rights reserved.</p>
+        <div class="social-links">
+            <a href="#">Facebook</a> | 
+            <a href="#">Twitter</a> | 
+            <a href="#">Instagram</a>
+        </div>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About - Coursify</title>
+    <link rel="stylesheet" href="style.css">
+    <script>
+        function toggleMenu() {
+            document.querySelector('.nav-links').classList.toggle('active');
+        }
+    </script>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <h1>Coursify</h1>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html" class="active">About</a></li>
+                <li><a href="courses.html">Courses</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="login.html" class="btn nav-btn">Login</a></li>
+            </ul>
+            <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+        </nav>
+    </header>
+
+    <section class="about" style="align-items: center; text-align: center;"> 
+        <h2>About Coursify</h2>
+        <div class="about-content">
+            <div class="about-text">
+                <h3>Empowering Learners Worldwide</h3>
+                <p>Coursify is an online learning platform committed to providing quality education to anyone, anywhere. Our mission is to transform lives through learning.</p>
+                <p>Founded in 2023, we've helped over <strong>1 million students</strong> achieve their goals through our comprehensive courses.</p>
+            </div>
+            <div class="about-image">
+            </div>
+        </div>
+    </section>
+    <script>
+        function toggleMenu() {
+            document.querySelector('.nav-links').classList.toggle('active');
+        }
+        </script>
+        
+
+    <section class="stats">
+        <div class="stats-container">
+            <div class="stat-item">
+                <h3>1M+</h3>
+                <p>Students Enrolled</p>
+            </div>
+            <div class="stat-item">
+                <h3>1000+</h3>
+                <p>Courses Available</p>
+            </div>
+            <div class="stat-item">
+                <h3>500+</h3>
+                <p>Expert Instructors</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="team">
+        <h2>Meet Our Experts</h2>
+        <div class="team-grid">
+            <div class="team-member">
+                <h3>RAM</h3>
+                <p>Web Development Instructor</p>
+            </div>
+            <div class="team-member">
+                <h3>SHAM</h3>
+                <p>Data Science Mentor</p>
+            </div>
+            <div class="team-member">
+                <h3>ARJUN</h3>
+                <p>Cyber Security Expert</p>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Coursify. All rights reserved.</p>
+        <div class="social-links">
+            <a href="#">Facebook</a> | 
+            <a href="#">Twitter</a> | 
+            <a href="#">Instagram</a>
+        </div>
+    </footer>
+</body>
+</html>

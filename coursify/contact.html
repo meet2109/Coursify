@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact - Coursify</title>
+    <link rel="stylesheet" href="style.css">
+    <script>
+        function toggleMenu() {
+            document.querySelector('.nav-links').classList.toggle('active');
+        }
+    </script>
+</head>
+<body>
+    <header>
+        <script>
+            function toggleMenu() {
+                document.querySelector('.nav-links').classList.toggle('active');
+            }
+            </script>
+            
+        <nav>
+            <div class="logo">
+                <h1>Coursify</h1>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="courses.html">Courses</a></li>
+                <li><a href="contact.html" class="active">Contact</a></li>
+                <li><a href="login.html" class="btn nav-btn">Login</a></li>
+            </ul>
+            <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+        </nav>
+    </header>
+    <script>
+        function toggleMenu() {
+            document.querySelector('.nav-links').classList.toggle('active');
+        }
+        </script>
+        
+
+    <section class="contact">
+        <h2>Contact Us</h2>
+        <div class="contact-container">
+            <form class="contact-form">
+                <input type="text" placeholder="Full Name" required>
+                <input type="email" placeholder="Email Address" required>
+                <textarea placeholder="Your Message" rows="5" required></textarea>
+                <button type="submit" class="btn">Send Message</button>
+            </form>
+            <div class="contact-info">
+                <h3>Contact Information</h3>
+                <p>Email: meetdoshi2109@gmail.com</p>
+                <p>Phone: 9175138921</p>
+                <p>Address: Parul University, Waghodia, Vadodara, Gujarat, India</p>
+    
+                <h3>Find Us Here</h3>
+                <div class="map-container">
+                    <iframe 
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3682.0126885174697!2d73.20161857517652!3d22.29731497965979!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x395fc8a4c77d0a6d%3A0x4a1f2ea10370e315!2sParul%20University!5e0!3m2!1sen!2sin!4v1711756349281!5m2!1sen!2sin"
+                        width="100%" height="250" style="border:0;" allowfullscreen="" loading="lazy">
+                    </iframe>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+
+    <footer>
+        <p>&copy; 2025 Coursify. All rights reserved.</p>
+        <div class="social-links">
+            <a href="#">Facebook</a> | 
+            <a href="#">Twitter</a> | 
+            <a href="#">Instagram</a>
+        </div>
+    </footer>
+</body>
+</html>

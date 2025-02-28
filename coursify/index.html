@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coursify - Learn Anything</title>
+    <link rel="stylesheet" href="style.css">
+    <script>
+        function toggleMenu() {
+            document.querySelector('.nav-links').classList.toggle('active');
+        }
+    </script>
+</head>
+<body >
+    <header>
+        <nav>
+            <div class="logo">
+                <h1><span class="gradient-text">Coursify</span></h1>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="courses.html">Courses</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="login.html" class="btn nav-btn">Login</a></li>
+            </ul>
+            <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+        </nav>
+        <div class="nav-curve"></div>
+    </header>
+    <script>
+        function toggleMenu() {
+            document.querySelector('.nav-links').classList.toggle('active');
+        }
+        </script>
+        
+
+    <section class="hero">
+        <div class="hero-content">
+            <h2>Transform Your Life Through Learning</h2>
+            <p>Master new skills with 1000+ expert-led courses</p>
+            <a href="register.html" class="btn pulse">Start Learning Free</a>
+        </div>
+    </section>
+    
+    <section class="features">
+        <div class="feature-card">
+            <h3>1000+ Courses</h3>
+            <p>Learn anything from programming to photography</p>
+        </div>
+        <div class="feature-card">
+            <h3>Expert Teachers</h3>
+            <p>Learn from industry experts</p>
+        </div>
+        <div class="feature-card">
+            <h3>Lifetime Access</h3>
+            <p>Learn at your own pace</p>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Coursify. All rights reserved.</p>
+        <div class="social-links">
+            <a href="#">Facebook</a> | 
+            <a href="#">Twitter</a> | 
+            <a href="#">Instagram</a>
+        </div>
+    </footer>
+</body>
+</html>

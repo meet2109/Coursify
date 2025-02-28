@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register - Coursify</title>
+    <link rel="stylesheet" href="style.css">
+    <script>
+        function toggleMenu() {
+            document.querySelector('.nav-links').classList.toggle('active');
+        }
+        function togglePassword(id, iconId) {
+            let passwordInput = document.getElementById(id);
+            let icon = document.getElementById(iconId);
+            if (passwordInput.type === "password") {
+                passwordInput.type = "text";
+                icon.textContent = "🙈";
+            } else {
+                passwordInput.type = "password";
+                icon.textContent = "👁️";
+            }
+        }
+        function validatePasswords() {
+            let password = document.getElementById("password").value;
+            let confirmPassword = document.getElementById("confirm-password").value;
+            if (password !== confirmPassword) {
+                alert("Passwords do not match!");
+                return false;
+            }
+            return true;
+        }
+    </script>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <h1>Coursify</h1>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="courses.html">Courses</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="login.html" class="btn nav-btn">Login</a></li>
+            </ul>
+            <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+        </nav>
+    </header>
+
+    <section class="auth-form">
+        <div class="register-container">
+            <h2>Create Account</h2>
+            <form onsubmit="return validatePasswords()">
+                <input type="text" placeholder="Full Name" required>
+                <input type="email" placeholder="Email" required>
+                <div class="password-field">
+                    <input type="password" id="password" placeholder="Password" required>
+                    <span id="togglePassword1" onclick="togglePassword('password', 'togglePassword1')">👁️</span>
+                </div>
+                <div class="password-field">
+                    <input type="password" id="confirm-password" placeholder="Confirm Password" required>
+                    <span id="togglePassword2" onclick="togglePassword('confirm-password', 'togglePassword2')">👁️</span>
+                </div>
+                <button type="submit" class="btn">Register</button>
+            </form>
+            <p>Already have an account? <a href="login.html">Login here</a></p>
+
+            <div class="social-login">
+                <p>Or sign up with</p>
+                <button class="btn social-btn google">Google</button>
+                <button class="btn social-btn facebook">Facebook</button>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Coursify. All rights reserved.</p>
+        <div class="social-links">
+            <a href="#">Facebook</a> | 
+            <a href="#">Twitter</a> | 
+            <a href="#">Instagram</a>
+        </div>
+    </footer>
+</body>
+</html>
